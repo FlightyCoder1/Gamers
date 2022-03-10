@@ -4,4 +4,5 @@ This directory contains some complex games. The code may be simple for you, but 
 ## List
 Currently, the list of simple games are:
 * Chess(indev)
+
 More coming soon!
