@@ -69,5 +69,57 @@ def getKnightMoves(pos, chessBoard):
     temp = [i for i in solutionMoves if i[0] >=0 and i[1] >=0]
     allPossibleMoves = ["".join([chess_map_from_index_to_alpha[i[1]], str(i[0] + 1)]) for i in temp]
     allPossibleMoves.sort()
+    return allPossibleMovesdef getKnightMoves(pos, chessBoard):
+    column, row = list(pos.strip().lower())
+    row = int(row) - 1
+   def getrook
+    column = chess_map_from_alpha_to_index[column]
+    i,j = row, column
+    solutionMoves = []
+    try:
+        temp = chessBoard[i + 1][j - 2]
+        solutionMoves.append([i + 1, j - 2])
+    except:
+        pass
+    try:
+        temp = chessBoard[i + 2][j - 1]
+        solutionMoves.append([i + 2, j - 1])
+    except:
+        pass
+    try:
+        temp = chessBoard[i + 2][j + 1]
+        solutionMoves.append([i + 2, j + 1])
+    except:
+        pass
+    try:
+       temp = chessBoard[i + 1][j + 2]
+       solutionMoves.append([i + 1, j + 2])
+    except:
+        pass
+    try:
+        temp = chessBoard[i - 1][j + 2]
+        solutionMoves.append([i - 1, j + 2])
+    except:
+        pass
+    try:
+        temp = chessBoard[i - 2][j + 1]
+        solutionMoves.append([i - 2, j + 1])
+    except:
+        pass
+    try:
+        temp = chessBoard[i - 2][j - 1]
+        solutionMoves.append([i - 2, j - 1])
+    except:
+        pass
+    try:
+        temp = chessBoard[i - 1][j - 2]
+        solutionMoves.append([i - 1, j - 2])
+    except:
+        pass
+
+    # Filter all negative values
+    temp = [i for i in solutionMoves if i[0] >=0 and i[1] >=0]
+    allPossibleMoves = ["".join([chess_map_from_index_to_alpha[i[1]], str(i[0] + 1)]) for i in temp]
+    allPossibleMoves.sort()
     return allPossibleMoves
  
